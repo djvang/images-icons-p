@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IMAGES</title>
+  <style>
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    h2:not(:first-child) {
+      margin-top: 50%;
+    }
+
+    .block {
+      padding: 1;
+      background-color: #ccc;
+    }
+  </style>
+  <style>
+    .image-responsive {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .image-fit {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-cover {
+      max-width: none;
+      max-height: none;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .image-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .overlay {
+      background-color: tomato;
+      position: relative;
+      min-height: 50vh;
+    }
+
+    .overlay img,
+    .overlay .background-cover {
+      opacity: 0.5;
+      position: absolute;
+    }
+
+    .background-cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -16px;
+    }
+
+    .grid>* {
+      flex: 1;
+      min-width: 1px;
+      padding: 16px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 10px;
+    }
+
+    .card-image {
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .card-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Default</h2>
+  <div class="block">
+    <img src="https://picsum.photos/800/400?image=0" alt="">
+  </div>
+
+  <h2>Responsive picture</h2>
+  <div class="block">
+    <picture>
+        <source srcset="https://picsum.photos/800/400?image=1" media="(max-width: 768px)">
+        <source srcset="https://picsum.photos/1200/800?image=2" media="(max-width: 1200px)">
+        <source srcset="https://picsum.photos/1400/1000?image=3">
+        <img srcset="https://picsum.photos/1400/1000?image=0" alt="">
+    </picture>
+  </div>
+  </div>
+
+  <h2>Responsive</h2>
+  <div class="block">
+    <img class="image-responsive" src="https://picsum.photos/800/400?image=0" alt="">
+  </div>
+
+  <h2>Background (Object fit)</h2>
+  <div class="block overlay">
+    <img class="image-fit" src="https://picsum.photos/800/400?image=0" alt="">
+  </div>
+
+  <h2>Background (min width / height)</h2>
+  <div class="block overlay">
+    <img class="image-cover" src="https://picsum.photos/800/400?image=0" alt="">
+  </div>
+
+  <h2>Background center (min width / height)</h2>
+  <div class="block overlay">
+    <img class="image-cover image-center" src="https://picsum.photos/800/400?image=0" alt="">
+  </div>
+
+  <h2>Background image css</h2>
+  <div class="block overlay">
+    <div class="background-cover" style="background-image: url(https://picsum.photos/800/400?image=0)"></div>
+  </div>
+
+
+  <h2>Background in component</h2>
+  <div class="block">
+    <div class="grid">
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/400?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/400?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/400?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/400?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Background in component</h2>
+  <div class="block">
+    <div class="grid">
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/400?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/300?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/1000/800?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/800/400?image=0" alt="">
+          </div>
+          <div class="card-title">Card title</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

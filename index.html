@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+	<style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+				}
+    </style>
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Images and icons</h2>
+		<p><a target="_blank" href="https://www.facebook.com/ivan.golvinov">Ivan Golvinov</a></p>
+		<style>
+			#cover h2 {
+				margin: 180px 0 0;
+				text-align: center;
+				font-size: 70px;
+			}
+
+			#cover p {
+				margin: 10px 0 0;
+				text-align: center;
+				font-style: italic;
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Форматы</h2>
+		<ol>
+			<li>GIF</li>
+			<li>PNG</li>
+			<li>JPEG</li>
+			<li>JPEG XR</li>
+			<li>WebP</li>
+			<li>SVG</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Изображения</h2>
+		<ol>
+			<li>Удаление и замена.</li>
+			<li>Векторные и растровые.</li>
+			<li>Оптимизация векторных и растровых.</li>
+			<li>Отзывчивость.</li>
+		</ol>
+	</section>
+
+	<section class="slide" id="cover-4">
+		<h2>Удаление и замена изображений</h2>
+		<ol>
+			<li>Удалите ненужные.</li>
+			<li>При возможности применяйте эффекты CSS3 (градиенты, фильтры, тени).</li>
+			<li>Используйте веб-шрифты вместо кодировки текста в изображениях.</li>
+		</ol>
+		<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=ru" class="copyright right">google developers</a>
+	</section>
+	<section class="slide" id="cover-5">
+		<h2>Векторные и растровые изображения</h2>
+		<div class="grid">
+			<div class="column">
+				<ol>
+					<li>Векторный формат отлично подходит для изображений из геометрических фигур.</li>
+					<li>Качество векторных изображений не зависит от масштаба и разрешения.</li>
+					<li>Используйте растровый формат для сложных изображений с множеством нестандартных форм и деталей.</li>
+				</ol>
+			</div>
+		</div>
+		<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=ru" class="copyright right">google developers</a>
+	</section>
+
+	<section class="slide" id="cover-6">
+		<h2>Оптимизация векторных и растровых изображений.</h2>
+		<ol>
+			<li>SVG - это формат изображений на основе <a href="https://prnt.sc/kuow1g">XML</a></li>
+			<li>SVG-файлы нужно минифицировать для уменьшения размера. <a href="https://jakearchibald.github.io/svgomg/">svgomg</a></li>
+			<li>Сжимайте SVG-файлы с помощью GZIP.</li>
+		</ol>
+		<ol>
+			<li>Растровое изображение - это сетка пикселей.</li>
+			<li>В каждом пикселе закодирована информация о цвете и прозрачности.</li>
+			<li>Чтобы уменьшить размер изображения, компрессоры используют различные методы для снижения количества битов на пиксель.</li>
+		</ol>
+		<style>
+			#cover-6 {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="cover-7">
+		<h2>Отзывчивость изображений</h2>
+		<ol>
+			<li>Имеют различие форматов (соотношений)</li>
+			<li>Упраление соотношений</li>
+			<li>Тег picture</li>
+			<li>Аттрибут srcset</li>
+		</ol>
+		<style>
+			#cover-7 {}
+		</style>
+	</section>
+
+	<section class="slide" id="cover-7-1">
+			<h2><a href="images.html">DEMO</a></h2>
+			<style>
+				#cover-7-1 h2 {
+					margin-top: 100px;
+					text-align: center;
+				}
+			</style>
+	</section>
+
+	<section class="slide" id="cover-8">
+			<h2>Иконки</h2>
+			<div class="columns">
+				<div>
+					<h3>Шрифт</h3>
+					<ul>
+						<li>TTF</li>
+						<li>OTF</li>
+						<li>EOT</li>
+						<li>SVG</li>
+						<li>WOFF, WOFF2</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Изображения</h3>
+					<ul>
+						<li>PNG</li>
+						<li>SVG</li>
+						<li>Спрайты</li>
+					</ul>
+				</div>
+			</div>
+			
+			<style>
+				#cover-8 .columns {
+					grid-template-columns: 50% 50%;
+				}
+				#cover-8 .colums > * {
+					flex-grow: 1;
+				}
+			</style>
+	</section>
+
+	<section class="slide" id="cover-9">
+			<h2><a href="icons.html">DEMO</a></h2>
+			<h3><a href="https://icomoon.io/app/#/select">icomoon</a></h3>
+			<style>
+					#cover-9 {
+						text-align: center;
+					}
+				#cover-9 h2 {
+					margin-top: 100px;
+				}
+			</style>
+	</section>
+
+	<section class="slide" id="cover-10">
+		<h2>Telegram channel</h2>
+		<img src="pictures/qrcode.png" alt="">
+		<a href="https://t.me/spalah_html_css">https://t.me/spalah_html_css</a>
+		<style>
+				#cover-10 {
+					text-align: center;
+				}
+			#cover-10 img {
+				max-width: 300px;
+				display: block;
+				margin: auto;
+			}
+		</style>
+	</section>
+
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
